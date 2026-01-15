@@ -1,18 +1,13 @@
 import { Component, HostListener } from '@angular/core';
-
+import { Employee } from './employee';
 
 @Component({
   selector: 'app-root',
+  preserveWhitespaces: false,
+  viewProviders : [Employee],
   template: `
-    <div [class]="theme">
-      <h1>Welcome to {{ title }}</h1>
-      <div style="margin-top:10px">
-        <button (click)="setTheme('light')">Light Pink</button>
-        <button (click)="setTheme('dark')">Dark Pink</button>
-        <button (click)="setTheme('more-dark')">More Dark Pink</button>
-      </div>
-      <app-student></app-student>
-    </div>
+  <h1>hello</h1>  <h2>hi</h2>
+    
   `,
   styles: [`
     .light h1 { background-color: #ffd6e7; color: #000; padding: 8px; }
@@ -36,4 +31,8 @@ export class AppComponent {
     alert("hello this is host listener trial ")
   }
   
+  constructor(private obj : Employee)
+  {
+
+  }
 }

@@ -6,19 +6,18 @@ import { AppComponent } from './app.component';
 import { StudentComponent } from './student/student.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { Student2Module } from './student2/student2.module';
-import { Employee } from './employee';
 
 @NgModule({
   declarations: [                       // it always contains component names in the declarations
     AppComponent,
-    StudentComponent,
+   
     EmployeeComponent
   ],
   imports: [
     BrowserModule,                        // it always contains module names in the imports 
     AppRoutingModule, Student2Module
   ],
-  providers: [Employee],                      // it always contains service names in the providers                      
+  providers: [],                      // it always contains service names in the providers                      
   bootstrap: [AppComponent]
 })
 export class AppModule {
