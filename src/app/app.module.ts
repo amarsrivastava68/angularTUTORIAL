@@ -1,0 +1,25 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { StudentComponent } from './student/student.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { Student2Module } from './student2/student2.module';
+
+@NgModule({
+  declarations: [                       // it always contains component names in the declarations
+    AppComponent,
+    StudentComponent,
+    EmployeeComponent
+  ],
+  imports: [
+    BrowserModule,                        // it always contains module names in the imports 
+    AppRoutingModule, Student2Module
+  ],
+  providers: [],                      // it always contains service names in the providers                      
+  bootstrap: [AppComponent]
+})
+export class AppModule {
+ 
+ }
