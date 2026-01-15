@@ -6,9 +6,11 @@ import { Employee } from '../employee';
   templateUrl: './student.component.html',
   styleUrls: ['./student.component.css'],
   preserveWhitespaces: true,
-  viewProviders : [Employee]
+  viewProviders : [Employee],
+  inputs : ['pData']
 
 })
 export class StudentComponent {
+  pData : string = '';
 
 }

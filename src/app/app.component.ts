@@ -6,7 +6,9 @@ import { Employee } from './employee';
   preserveWhitespaces: false,
   viewProviders : [Employee],
   template: `
-  <h1>hello</h1>  <h2>hi</h2>
+  
+<h1>parent</h1> <input type="text" #parentD (keyup) = '0'/>
+<app-student [pData]="parentD.value">   </app-student>
     
   `,
   styles: [`
@@ -25,11 +27,11 @@ export class AppComponent {
     this.theme = t;
   }
 
-  @HostListener('click' , ['$event'])
-  show ()
-  {
-    alert("hello this is host listener trial ")
-  }
+  // @HostListener('click' , ['$event'])
+  // show ()
+  // {
+  //   alert("hello this is host listener trial ")
+  // }
   
   constructor(private obj : Employee)
   {

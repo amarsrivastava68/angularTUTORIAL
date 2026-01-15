@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { StudentComponent } from './student/student.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { Student2Module } from './student2/student2.module';
+import { EncapDemoComponent } from './encapsulation-component/encapsulation-component.component';
 
 @NgModule({
   declarations: [                       // it always contains component names in the declarations
     AppComponent,
-   
-    EmployeeComponent
+   StudentComponent,
+    EmployeeComponent,
+        EncapDemoComponent
   ],
   imports: [
     BrowserModule,                        // it always contains module names in the imports 
