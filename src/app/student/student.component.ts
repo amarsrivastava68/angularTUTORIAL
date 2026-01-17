@@ -12,5 +12,6 @@ import { Employee } from '../employee';
 })
 export class StudentComponent {
   pData : string = '';
+  isLoggedIn : boolean = false;
 
 }

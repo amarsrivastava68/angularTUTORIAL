@@ -2,3 +2,25 @@
 
 <p>{{pData}}</p>       
  <!-- binding of pdata from parent to child , using property binding , using simple inputs -->
+
+<!-- ngIf with then & else -->
+<div *ngIf="isLoggedIn; then loggedInTpl; else loggedOutTpl"></div>
+
+<!-- THEN template -->
+<ng-template #loggedInTpl>
+  <h3>Welcome back!</h3>
+  <p>You are logged in.</p>
+</ng-template>
+
+<!-- ELSE template -->
+<ng-template #loggedOutTpl>
+  <h3>Please log in</h3>
+  <p>You are not logged in.</p>
+</ng-template>
+
+<!-- Toggle button -->
+<button (click)="isLoggedIn = !isLoggedIn">
+  Toggle Login Status
+</button>
+
+ 
