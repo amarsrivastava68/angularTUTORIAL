@@ -10,6 +10,7 @@ import { Employee } from './employee';
 <h1>parent</h1> <input type="text" #parentD (keyup) = '0'/>
 <app-student [pData]="parentD.value">   </app-student>
 <app-switch-implementaion-child [mode]="appMode"></app-switch-implementaion-child>
+<app-employee-list [employees]="employeeList"></app-employee-list>
 
     
   `,
@@ -41,8 +42,11 @@ export class AppComponent {
     this.appMode = mode;
   }
   
-  constructor(private obj : Employee)
-  {
 
-  }
+   employeeList: Employee[] = [
+    { id: 1, name: 'Alice', role: 'Developer' },
+    { id: 2, name: 'Bob', role: 'Tester' },
+    { id: 3, name: 'Charlie', role: 'Manager' }
+  ];
+  
 }

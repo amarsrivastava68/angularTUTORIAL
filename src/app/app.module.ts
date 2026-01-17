@@ -8,6 +8,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { Student2Module } from './student2/student2.module';
 import { EncapDemoComponent } from './encapsulation-component/encapsulation-component.component';
 import { SwitchImplementaionChildComponent } from './switch-implementaion-child/switch-implementaion-child.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
 SwitchImplementaionChildComponent
 @NgModule({
   declarations: [                       // it always contains component names in the declarations
@@ -15,7 +16,8 @@ SwitchImplementaionChildComponent
    StudentComponent,
     EmployeeComponent,
         EncapDemoComponent,
-        SwitchImplementaionChildComponent
+        SwitchImplementaionChildComponent,
+        EmployeeListComponent
   ],
   imports: [
     BrowserModule,                        // it always contains module names in the imports 
