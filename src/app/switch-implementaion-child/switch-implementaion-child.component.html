@@ -1,0 +1,30 @@
+<h3>Switch Implementation (Child)</h3>
+
+<div [ngSwitch]="mode">
+
+  <div *ngSwitchCase="'home'">
+    <h4>🏠 Home</h4>
+    <p>Welcome to the application.</p>
+  </div>
+
+  <div *ngSwitchCase="'profile'">
+    <h4>👤 Profile</h4>
+    <p>Manage your profile information.</p>
+  </div>
+
+  <div *ngSwitchCase="'settings'">
+    <h4>⚙️ Settings</h4>
+    <p>Configure your preferences.</p>
+  </div>
+
+  <div *ngSwitchCase="'help'">
+    <h4>❓ Help</h4>
+    <p>How can we assist you?</p>
+  </div>
+
+  <div *ngSwitchDefault>
+    <h4>Unknown Mode</h4>
+    <p>Please select a valid option.</p>
+  </div>
+
+</div>

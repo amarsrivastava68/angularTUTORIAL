@@ -9,6 +9,8 @@ import { Employee } from './employee';
   
 <h1>parent</h1> <input type="text" #parentD (keyup) = '0'/>
 <app-student [pData]="parentD.value">   </app-student>
+<app-switch-implementaion-child [mode]="appMode"></app-switch-implementaion-child>
+
     
   `,
   styles: [`
@@ -32,6 +34,12 @@ export class AppComponent {
   // {
   //   alert("hello this is host listener trial ")
   // }
+
+  appMode: string = 'help';
+
+  setMode(mode: string) {
+    this.appMode = mode;
+  }
   
   constructor(private obj : Employee)
   {
