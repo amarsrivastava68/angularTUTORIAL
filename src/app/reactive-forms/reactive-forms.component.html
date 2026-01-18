@@ -1,0 +1,38 @@
+<form [formGroup]="userForm" (ngSubmit)="submitForm()">
+  <label for="name">Name:</label>
+  <input id="name" 
+  type="text"
+  name="name"
+  placeholder="enter your name "
+   formControlName="name" />
+
+  <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched">
+    Name is required.
+  </div>
+
+  <label for="email">Email:</label>
+  <input id="email" type="text" name="email"  placeholder="enter your email " formControlName="email" />
+  <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+    Enter a valid email.
+  </div>
+
+  <!-- sub form builder requires , form Group Name not the formGroup property -->
+  <div formGroupName="address">
+
+    <label for="street">Street:</label>
+    <input id="street" type="text" name="street" placeholder="enter your street " formControlName="street" />
+
+    <label for="city">City:</label>
+    <input id="city" type="text" name="city" placeholder="enter your city " formControlName="city" />
+  </div>
+  <div formArrayName="phoneNumbers">
+  <div *ngFor="let phoneNumber of getPhoneNumbers().controls; let i = index">
+    <label for="phoneNumber-{{i}}">Phone Number {{i + 1}}:</label>
+    <input id="phoneNumber-{{i}}" type="text" [formControlName]="i" placeholder="enter your phone number " />
+    <button type="button" (click)="removePhoneNumber(i)">Remove</button>
+  </div>
+  <button type="button" (click)="addPhoneNumber()">Add Phone Number</button>
+</div>
+
+  <button type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>

@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Employee } from './employee';
+import { StudentComponent } from './student/student.component';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ import { Employee } from './employee';
 <app-student [pData]="parentD.value">   </app-student>
 <app-switch-implementaion-child [mode]="appMode"></app-switch-implementaion-child>
 <app-employee-list [employees]="employeeList"></app-employee-list>
+<app-reactive-forms></app-reactive-forms>
 
     
   `,

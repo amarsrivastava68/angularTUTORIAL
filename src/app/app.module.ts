@@ -9,6 +9,8 @@ import { Student2Module } from './student2/student2.module';
 import { EncapDemoComponent } from './encapsulation-component/encapsulation-component.component';
 import { SwitchImplementaionChildComponent } from './switch-implementaion-child/switch-implementaion-child.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 SwitchImplementaionChildComponent
 @NgModule({
   declarations: [                       // it always contains component names in the declarations
@@ -17,11 +19,12 @@ SwitchImplementaionChildComponent
     EmployeeComponent,
         EncapDemoComponent,
         SwitchImplementaionChildComponent,
-        EmployeeListComponent
+        EmployeeListComponent,
+        ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,                        // it always contains module names in the imports 
-    AppRoutingModule, Student2Module
+    AppRoutingModule, Student2Module , FormsModule , ReactiveFormsModule
   ],
   providers: [],                      // it always contains service names in the providers                      
   bootstrap: [AppComponent]
