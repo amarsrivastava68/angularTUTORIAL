@@ -1,0 +1,42 @@
+<!-- ng-class-example.component.html -->
+<div class="container">
+  <h2>NgClass Examples</h2>
+
+  <!-- Example 1: Button Toggle -->
+  <div class="example-section">
+    <h3>Example 1: Button Active/Inactive State</h3>
+    <p>Click the button to toggle its state</p>
+    
+    <button 
+      [ngClass]="{'btn-active': isButtonActive, 'btn-inactive': !isButtonActive}"
+      (click)="toggleButton()">
+      {{ isButtonActive ? 'Active' : 'Inactive' }}
+    </button>
+
+    <p class="status">Current State: <strong>{{ isButtonActive ? 'ACTIVE' : 'INACTIVE' }}</strong></p>
+  </div>
+
+  <!-- Example 2: Task List with Priorities -->
+  <div class="example-section">
+    <h3>Example 2: Task Priority & Completion Status</h3>
+    <p>Click on any task to mark it as completed/incomplete</p>
+    
+    <div class="task-list">
+      <div 
+        *ngFor="let task of tasks; let i = index" 
+        class="task-item"
+        [ngClass]="{
+          'priority-high': task.priority === 'high',
+          'priority-medium': task.priority === 'medium',
+          'priority-low': task.priority === 'low',
+          'completed': task.completed
+        }"
+        (click)="toggleTaskCompletion(i)">
+        
+        <span class="task-name">{{ task.name }}</span>
+        <span class="task-priority">{{ task.priority | uppercase }}</span>
+        <span class="task-status">{{ task.completed ? '✓ Done' : '○ Pending' }}</span>
+      </div>
+    </div>
+  </div>
+</div>

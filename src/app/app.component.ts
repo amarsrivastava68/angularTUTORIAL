@@ -14,6 +14,7 @@ import { StudentComponent } from './student/student.component';
 <app-employee-list [employees]="employeeList"></app-employee-list>
 <app-reactive-forms></app-reactive-forms>
 <app-ngstyle-demo></app-ngstyle-demo>
+<app-ng-class-example></app-ng-class-example>
 
     
   `,
