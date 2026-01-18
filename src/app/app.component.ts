@@ -13,6 +13,7 @@ import { StudentComponent } from './student/student.component';
 <app-switch-implementaion-child [mode]="appMode"></app-switch-implementaion-child>
 <app-employee-list [employees]="employeeList"></app-employee-list>
 <app-reactive-forms></app-reactive-forms>
+<app-ngstyle-demo></app-ngstyle-demo>
 
     
   `,

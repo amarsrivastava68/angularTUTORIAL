@@ -11,6 +11,7 @@ import { SwitchImplementaionChildComponent } from './switch-implementaion-child/
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgstyleDemoComponent } from './ng-style-tester/ng-style-tester.component';
 SwitchImplementaionChildComponent
 @NgModule({
   declarations: [                       // it always contains component names in the declarations
@@ -20,7 +21,8 @@ SwitchImplementaionChildComponent
         EncapDemoComponent,
         SwitchImplementaionChildComponent,
         EmployeeListComponent,
-        ReactiveFormsComponent
+        ReactiveFormsComponent,
+        NgstyleDemoComponent
   ],
   imports: [
     BrowserModule,                        // it always contains module names in the imports 
