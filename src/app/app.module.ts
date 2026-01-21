@@ -13,15 +13,14 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgstyleDemoComponent } from './ng-style-tester/ng-style-tester.component';
 import { NgClassExampleComponent } from './ng-class-example/ng-class-example.component';
-import { PhoneFormatPipe } from './pipes/phone-format.pipe';
-import { ReverseTextPipe } from './pipes/reverse-text.pipe';
-import { FileSizePipe } from './pipes/file-size.pipe';
-import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
+
 import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { TruncatePipe } from './pipes/truncate.pipe';
 import { TimeAgoPipe } from './pipes/time-ago.pipe';
-import { HighlightPipe } from './pipes/highlight.pipe'
+import { HighlightPipe } from './pipes/highlight.pipe';
+import { PhoneFormatPipe } from './pipes/phone-format.pipe';
+import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe'
 
 
 SwitchImplementaionChildComponent
@@ -37,15 +36,14 @@ SwitchImplementaionChildComponent
     NgstyleDemoComponent,
     NgClassExampleComponent,
     
-    PhoneFormatPipe,
-    ReverseTextPipe,
-    FileSizePipe,
-    FilterByCategoryPipe,
+    
     PipesDemoComponent,
     CapitalizePipe,
     TruncatePipe,
     TimeAgoPipe,
-    HighlightPipe
+    HighlightPipe,
+    PhoneFormatPipe,
+    FilterByCategoryPipe
   ],
   imports: [
     BrowserModule,                        // it always contains module names in the imports 

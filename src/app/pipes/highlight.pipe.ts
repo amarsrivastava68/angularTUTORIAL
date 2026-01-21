@@ -4,9 +4,10 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'highlight'
 })
 export class HighlightPipe implements PipeTransform {
-
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: string, search: string): string {
+    if (!search || !value) return value;
+    
+    const re = new RegExp(search, 'gi');
+    return value.replace(re, (match) => `<mark>${match}</mark>`);
   }
-
 }
