@@ -13,26 +13,50 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgstyleDemoComponent } from './ng-style-tester/ng-style-tester.component';
 import { NgClassExampleComponent } from './ng-class-example/ng-class-example.component';
+import { PhoneFormatPipe } from './pipes/phone-format.pipe';
+import { ReverseTextPipe } from './pipes/reverse-text.pipe';
+import { FileSizePipe } from './pipes/file-size.pipe';
+import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
+import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
+import { TruncatePipe } from './pipes/truncate.pipe';
+import { TimeAgoPipe } from './pipes/time-ago.pipe';
+import { HighlightPipe } from './pipes/highlight.pipe'
+
+
 SwitchImplementaionChildComponent
 @NgModule({
   declarations: [                       // it always contains component names in the declarations
     AppComponent,
-   StudentComponent,
+    StudentComponent,
     EmployeeComponent,
-        EncapDemoComponent,
-        SwitchImplementaionChildComponent,
-        EmployeeListComponent,
-        ReactiveFormsComponent,
-        NgstyleDemoComponent,
-        NgClassExampleComponent
+    EncapDemoComponent,
+    SwitchImplementaionChildComponent,
+    EmployeeListComponent,
+    ReactiveFormsComponent,
+    NgstyleDemoComponent,
+    NgClassExampleComponent,
+    
+    PhoneFormatPipe,
+    ReverseTextPipe,
+    FileSizePipe,
+    FilterByCategoryPipe,
+    PipesDemoComponent,
+    CapitalizePipe,
+    TruncatePipe,
+    TimeAgoPipe,
+    HighlightPipe
   ],
   imports: [
     BrowserModule,                        // it always contains module names in the imports 
-    AppRoutingModule, Student2Module , FormsModule , ReactiveFormsModule
+    AppRoutingModule, 
+    Student2Module,
+     FormsModule,
+     ReactiveFormsModule
   ],
   providers: [],                      // it always contains service names in the providers                      
   bootstrap: [AppComponent]
 })
 export class AppModule {
- 
- }
+
+}

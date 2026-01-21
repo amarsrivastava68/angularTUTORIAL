@@ -1,23 +1,11 @@
 import { Component, HostListener } from '@angular/core';
 import { Employee } from './employee';
 import { StudentComponent } from './student/student.component';
-
 @Component({
   selector: 'app-root',
   preserveWhitespaces: false,
   viewProviders : [Employee],
-  template: `
-  
-<h1>parent</h1> <input type="text" #parentD (keyup) = '0'/>
-<app-student [pData]="parentD.value">   </app-student>
-<app-switch-implementaion-child [mode]="appMode"></app-switch-implementaion-child>
-<app-employee-list [employees]="employeeList"></app-employee-list>
-<app-reactive-forms></app-reactive-forms>
-<app-ngstyle-demo></app-ngstyle-demo>
-<app-ng-class-example></app-ng-class-example>
-
-    
-  `,
+  templateUrl: './app.component.html',
   styles: [`
     .light h1 { background-color: #ffd6e7; color: #000; padding: 8px; }
     .dark h1 { background-color: #ff73a6; color: #fff; padding: 8px; }
@@ -42,11 +30,16 @@ export class AppComponent {
 
   appMode: string = 'help';
 
+  normalInput:string = 'hello';
+
   setMode(mode: string) {
     this.appMode = mode;
   }
   
 
+  updateNormalInput(event: Event): void {
+  this.appMode = (event.target as HTMLInputElement).value;
+}
    employeeList: Employee[] = [
     { id: 1, name: 'Alice', role: 'Developer' },
     { id: 2, name: 'Bob', role: 'Tester' },

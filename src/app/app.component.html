@@ -1,16 +1,12 @@
 
-<h1>parent</h1> <input type="text" #parentD (keyup) = ''/>
+<h1>parent</h1> <input type="text" #parentD (keyup) = '0'/>
 <app-student [pData]="parentD.value">   </app-student>
-
-<h2>App Component (Parent)</h2>
-
-<button (click)="setMode('home')">Home</button>
-<button (click)="setMode('profile')">Profile</button>
-<button (click)="setMode('settings')">Settings</button>
-<button (click)="setMode('help')">Help</button>
-
-<hr>
-
-<!-- Passing data to child -->
-<app-switch-implementation-child [mode]="appMode"></app-switch-implementation>
-
+<input 
+  [(ngModel)]="normalInput" 
+ >
+  check the value of normalInput: {{normalInput}}  
+<app-switch-implementaion-child [mode]="appMode"></app-switch-implementaion-child>
+<app-employee-list [employees]="employeeList"></app-employee-list>
+<app-reactive-forms></app-reactive-forms>
+<app-ngstyle-demo></app-ngstyle-demo>
+<app-ng-class-example></app-ng-class-example>
